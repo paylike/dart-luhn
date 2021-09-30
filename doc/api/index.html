@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="generator" content="made with love by dartdoc 3.1.0">
+  <meta name="description" content="paylike_luhn API docs, for the Dart programming language.">
+  <title>paylike_luhn - Dart API docs</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href=""
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="https://paylike.io">paylike_luhn package</a></li>
+  </ol>
+  <div class="self-name">paylike_luhn</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-main-content" class="main-content">
+      
+<section class="desc markdown">
+  <h1 id="calculateverify-check-digit-luhn-of-credit-cards">Calculate/verify check digit (luhn) of credit cards</h1>
+<p>This library is a clone of the original javascript <a href="https://github.com/paylike/luhn">implementation from Paylike</a>.</p>
+<pre class="language-dart"><code class="language-dart">// Is the card number valid?
+var card = '6123451234567893';
+var luhn = PaylikeLuhn();
+luhn.isValid(card);	// true
+
+
+// Calculate check digit
+// MII + IIN + "Individual account number"
+var incomplete = '612345123456789';
+
+luhn.calculateCheckDigit(incomplete);	// "3"
+</code></pre>
+<p>Implemented according to ISO/IEC 7812-1:2015(E) which goes:</p>
+<ol>
+<li>
+<p>Double the value of alternate digits beginning with the first right-hand
+digit (low order).</p>
+</li>
+<li>
+<p>Add the individual digits comprising the products obtained in Step 1 to
+each of the unaffected digits in the original number.</p>
+</li>
+<li>
+<p>Subtract the total obtained in Step 2 from the next higher number ending in
+0 <code>this is the equivalent of calculating the “tens complement” of the
+low-order digit (unit digit) of the total</code>. If the total obtained in Step 2
+is a number ending in zero (30, 40, etc.), the check digit is 0.</p>
+</li>
+</ol>
+</section>
+
+
+      <section class="summary">
+          <h2>Libraries</h2>
+        <dl>
+          <dt id="paylike_luhn">
+  <span class="name"><a href="paylike_luhn/paylike_luhn-library.html">paylike_luhn</a></span> 
+
+</dt>
+<dd>Support for doing something awesome. <a href="paylike_luhn/paylike_luhn-library.html">[...]</a>
+</dd>
+
+        </dl>
+      </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="https://paylike.io">paylike_luhn package</a></li>
+</ol>
+
+
+    <h5 class="hidden-xs"><span class="package-name">paylike_luhn</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="paylike_luhn/paylike_luhn-library.html">paylike_luhn</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div>
+
+</main>
+
+<footer>
+  <span class="no-break">
+    paylike_luhn
+      1.0.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/script.js?v1"></script>
+
+
+
+</body>
+
+</html>
+

@@ -1,3 +1,7 @@
+## 1.0.2
+
+- Added dartdoc
+
 ## 1.0.1
 
 - Fixed example path
