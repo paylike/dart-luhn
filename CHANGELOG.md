@@ -1,3 +1,7 @@
+## 1.0.3
+
+- Lowered required SDK version due to pub.dev being weird about it
+
 ## 1.0.2
 
 - Added dartdoc
