@@ -1,3 +1,7 @@
+## 2.0.0
+
+- Changed class to be static
+
 ## 1.0.4
 
 - Added some small improvements to the docs and made constructor const

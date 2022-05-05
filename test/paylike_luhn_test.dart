@@ -35,12 +35,13 @@ void main() {
     ];
     test('Validation test', () {
       for (var pan in pans) {
-        expect(luhn.isValid(pan), true);
-        expect(luhn.calculateCheckDigit(pan), pan.substring(pan.length - 1));
+        expect(PaylikeLuhn.isValid(pan), true);
+        expect(PaylikeLuhn.calculateCheckDigit(pan),
+            pan.substring(pan.length - 1));
       }
 
       for (var pan in invalid) {
-        expect(luhn.isValid(pan), false);
+        expect(PaylikeLuhn.isValid(pan), false);
       }
     });
   });
