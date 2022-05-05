@@ -1,12 +1,14 @@
-// PaylikeLuhn defines the class responsible for running the validation
+/// PaylikeLuhn defines the class responsible for running the validation
 class PaylikeLuhn {
-  // isValid decides if [cardNumber] is valid or not
+  const PaylikeLuhn();
+
+  /// isValid decides if [cardNumber] is valid or not
   bool isValid(String cardNumber) {
     return cardNumber.substring(cardNumber.length - 1) ==
         _calculate(cardNumber.substring(0, cardNumber.length - 1));
   }
 
-  // calculateCheckDigit will return the check digit of [cardNumber]
+  /// calculateCheckDigit will return the check digit of [cardNumber]
   String calculateCheckDigit(String cardNumber) {
     return _calculate(cardNumber.substring(0, cardNumber.length - 1));
   }

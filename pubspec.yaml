@@ -1,6 +1,6 @@
 name: paylike_luhn
 description: Luhn implementation based on the JS version for Paylike libraries
-version: 1.0.3
+version: 1.0.4
 homepage: https://paylike.io
 environment:
   sdk: '>=2.12.0 <3.0.0'
