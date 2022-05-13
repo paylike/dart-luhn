@@ -12,7 +12,7 @@ luhn.isValid(card);	// true
 // MII + IIN + "Individual account number"
 var incomplete = '612345123456789';
 
-luhn.calculateCheckDigit(incomplete);	// "3"
+luhn.calculateCheckDigit(incomplete);	// "1"
 ```
 
 Implemented according to ISO/IEC 7812-1:2015(E) which goes:

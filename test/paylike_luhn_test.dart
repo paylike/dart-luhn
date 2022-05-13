@@ -3,7 +3,6 @@ import 'package:test/test.dart';
 
 void main() {
   group('A group of tests', () {
-    final luhn = PaylikeLuhn();
     final pans = [
       // from the ISO standard
       '6123451234567893',
